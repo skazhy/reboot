@@ -161,6 +161,8 @@ trait RequestBuilderVerbs extends RequestVerbs {
     subject.underlying { _.setBody(data) }
   def setBody(file: java.io.File) =
     subject.underlying { _.setBody(file) }
+  def setBodyEncoding(encoding: String) =
+    subject.underlying { _.setBodyEncoding(encoding) }
   def setHeader(name: String, value: String) =
     subject.underlying { _.setHeader(name, value) }
   def setHeaders(headers: Map[String, Seq[String]]) =
